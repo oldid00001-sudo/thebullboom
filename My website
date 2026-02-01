@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheBullBoom | Next Gen Trading</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #ffffff; 
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, #fffbeb 0%, #ffffff 100%);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+        .gold-button {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            transition: all 0.3s ease;
+        }
+        .gold-button:hover {
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+            transform: scale(1.02);
+        }
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body class="selection:bg-yellow-100 selection:text-yellow-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-yellow-400 rounded-xl flex items-center justify-center shadow-sm">
+                    <i data-lucide="trending-up" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-slate-900 uppercase">The<span class="text-yellow-500">BullBoom</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#home" class="hover:text-yellow-500 transition">Home</a>
+                <a href="#about" class="hover:text-yellow-500 transition">Our Method</a>
+                <a href="#services" class="hover:text-yellow-500 transition">Services</a>
+                <button class="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-slate-800 transition shadow-lg shadow-slate-200">
+                    Client Login
+                </button>
+            </div>
+            
+            <button class="md:hidden text-slate-900">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-40 pb-20 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 animate-fade-in">
+                <div class="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-100 px-4 py-1.5 rounded-full">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
+                    </span>
+                    <span class="text-xs font-bold text-yellow-700 uppercase tracking-widest">Market Analysis Live</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-extrabold text-slate-900 leading-[1.1]">
+                    Stop Guessing. <br>
+                    <span class="text-yellow-500">Start Dominating.</span>
+                </h1>
+                
+                <p class="text-xl text-slate-500 leading-relaxed max-w-lg">
+                    Premium trading education aur institutional signals jo aapko retail traps se nikaal kar profitable banate hain.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="gold-button text-white px-10 py-4 rounded-2xl font-bold text-lg">
+                        Get Started Free
+                    </button>
+                    <button class="bg-white border-2 border-slate-100 text-slate-900 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition">
+                        View Results
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-6 pt-4">
+                    <div class="flex -space-x-3">
+                        <img class="w-10 h-10 rounded-full border-4 border-white" src="https://i.pravatar.cc/100?u=1" alt="User">
+                        <img class="w-10 h-10 rounded-full border-4 border-white" src="https://i.pravatar.cc/100?u=2" alt="User">
+                        <img class="w-10 h-10 rounded-full border-4 border-white" src="https://i.pravatar.cc/100?u=3" alt="User">
+                    </div>
+                    <p class="text-sm text-slate-400 font-medium">Joined by <span class="text-slate-900 font-bold">1,200+</span> active traders</p>
+                </div>
+            </div>
+
+            <!-- Dashboard Mockup -->
+            <div class="relative">
+                <div class="absolute -inset-4 bg-yellow-200/30 rounded-[40px] blur-3xl"></div>
+                <div class="relative bg-white border border-slate-100 rounded-[32px] shadow-2xl p-8">
+                    <div class="flex justify-between items-center mb-10">
+                        <div>
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Monthly Growth</p>
+                            <h3 class="text-3xl font-black text-slate-900">+42.8%</h3>
+                        </div>
+                        <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center">
+                            <i data-lucide="arrow-up-right" class="text-green-600"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Simplified Chart -->
+                    <div class="flex items-end justify-between h-40 gap-3">
+                        <div class="flex-1 bg-slate-50 rounded-lg h-[40%] hover:bg-yellow-100 transition-colors"></div>
+                        <div class="flex-1 bg-slate-50 rounded-lg h-[65%] hover:bg-yellow-100 transition-colors"></div>
+                        <div class="flex-1 bg-slate-50 rounded-lg h-[45%] hover:bg-yellow-100 transition-colors"></div>
+                        <div class="flex-1 bg-slate-50 rounded-lg h-[80%] hover:bg-yellow-100 transition-colors"></div>
+                        <div class="flex-1 bg-yellow-400 rounded-lg h-[100%] shadow-lg shadow-yellow-100"></div>
+                    </div>
+                    
+                    <div class="mt-8 pt-8 border-t border-slate-50 flex justify-between items-center">
+                        <div class="flex gap-2">
+                            <div class="w-8 h-8 rounded bg-slate-100"></div>
+                            <div class="w-8 h-8 rounded bg-slate-100"></div>
+                        </div>
+                        <p class="text-slate-400 text-xs font-medium uppercase">Institutional Edge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="services" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl font-black text-slate-900 mb-6 uppercase tracking-tight">Hamara Maqsad</h2>
+                <p class="text-lg text-slate-500">Hum gambling nahi, system sikhaate hain. Banks aur bare idaray jis tarah trade karte hain, hum aapko wahi raasta dikhate hain.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="card-hover bg-slate-50 p-10 rounded-[32px]">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="book-open" class="text-yellow-500 w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Elite Education</h3>
+                    <p class="text-slate-500 leading-relaxed">Basic se lekar advanced SMC (Smart Money Concepts) tak sab kuch step-by-step.</p>
+                </div>
+
+                <div class="card-hover bg-slate-900 p-10 rounded-[32px] text-white">
+                    <div class="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="zap" class="text-yellow-400 w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">VIP Signals</h3>
+                    <p class="text-slate-400 leading-relaxed">High precision entries aur clear targets ke saath daily signals directly aapke phone par.</p>
+                </div>
+
+                <div class="card-hover bg-slate-50 p-10 rounded-[32px]">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="users" class="text-yellow-500 w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Community</h3>
+                    <p class="text-slate-500 leading-relaxed">Aise traders ke saath judiye jo seekhne aur grow karne par yaqeen rakhte hain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="py-20 border-t border-slate-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
+                    <i data-lucide="trending-up" class="text-white w-4 h-4"></i>
+                </div>
+                <span class="text-lg font-bold text-slate-900 uppercase">TheBullBoom</span>
+            </div>
+            <p class="text-slate-400 text-sm max-w-md mx-auto mb-10">Trading is risky. Only trade with money you can afford to lose. We provide education, not financial advice.</p>
+            <div class="flex justify-center gap-8 text-slate-400 font-bold text-xs tracking-widest uppercase">
+                <a href="#" class="hover:text-slate-900 transition">Terms</a>
+                <a href="#" class="hover:text-slate-900 transition">Privacy</a>
+                <a href="#" class="hover:text-slate-900 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
